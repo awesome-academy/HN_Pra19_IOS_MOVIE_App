@@ -1,0 +1,12 @@
+//
+//  Config.xcconfig
+//  HN_Pra19_IOS_Movie_App
+//
+//  Created by Khánh Vũ on 29/7/24.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+
+API_KEY = "0a07408461fd9d7a08e587c651bb635b"

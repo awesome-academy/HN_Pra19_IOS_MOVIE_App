@@ -299,5 +299,4 @@ extension UITableView {
     func hideLoadMore() {
         tableFooterView = nil
     }
-
 }
