@@ -44,16 +44,22 @@
 		3387D0362C5783D400C96B7D /* APIPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3387D0352C5783D400C96B7D /* APIPath.swift */; };
 		3387D0382C57843600C96B7D /* MoviesResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3387D0372C57843600C96B7D /* MoviesResult.swift */; };
 		3387D03A2C57845D00C96B7D /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3387D0392C57845D00C96B7D /* VideoModel.swift */; };
+		3387D03C2C57870E00C96B7D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3387D03B2C57870E00C96B7D /* BaseViewController.swift */; };
+		3387D03E2C57874C00C96B7D /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3387D03D2C57874C00C96B7D /* HomeViewController.xib */; };
 		33A663582C5272B300A6AAC6 /* KVCircleSubMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A663542C5272B300A6AAC6 /* KVCircleSubMenuButton.swift */; };
 		33A663592C5272B300A6AAC6 /* KVCircleMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A663552C5272B300A6AAC6 /* KVCircleMenuButton.swift */; };
 		33A6635A2C5272B300A6AAC6 /* KVCircleHomeMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A663562C5272B300A6AAC6 /* KVCircleHomeMenuButton.swift */; };
 		33A6635B2C5272B300A6AAC6 /* KVCircleMenuAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A663572C5272B300A6AAC6 /* KVCircleMenuAnimator.swift */; };
 		33A6635E2C5272E000A6AAC6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A6635C2C5272E000A6AAC6 /* HomeViewController.swift */; };
-		33A6635F2C5272E000A6AAC6 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A6635D2C5272E000A6AAC6 /* HomeViewController.xib */; };
 		33A663622C5272F100A6AAC6 /* ActorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A663602C5272F100A6AAC6 /* ActorViewController.swift */; };
 		33A663632C5272F100A6AAC6 /* ActorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A663612C5272F100A6AAC6 /* ActorViewController.xib */; };
 		33A663662C5272FD00A6AAC6 /* StaticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A663642C5272FD00A6AAC6 /* StaticsViewController.swift */; };
 		33A663672C5272FD00A6AAC6 /* StaticsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A663652C5272FD00A6AAC6 /* StaticsViewController.xib */; };
+		33AED5AA2C578A52005EEB39 /* HomeItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33AED5A82C578A52005EEB39 /* HomeItemCell.xib */; };
+		33AED5AB2C578A52005EEB39 /* HomeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AED5A92C578A52005EEB39 /* HomeItemCell.swift */; };
+		33DF09B32C58F3F4009D323B /* ToastEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DF09B22C58F3F4009D323B /* ToastEnum.swift */; };
+		33DF09B52C58FD48009D323B /* ActivityIndicatorUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DF09B42C58FD48009D323B /* ActivityIndicatorUtility.swift */; };
+		33DF09B72C58FE13009D323B /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DF09B62C58FE13009D323B /* ImageCacheManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,16 +102,22 @@
 		3387D0352C5783D400C96B7D /* APIPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPath.swift; sourceTree = "<group>"; };
 		3387D0372C57843600C96B7D /* MoviesResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesResult.swift; sourceTree = "<group>"; };
 		3387D0392C57845D00C96B7D /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
+		3387D03B2C57870E00C96B7D /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		3387D03D2C57874C00C96B7D /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		33A663542C5272B300A6AAC6 /* KVCircleSubMenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KVCircleSubMenuButton.swift; sourceTree = "<group>"; };
 		33A663552C5272B300A6AAC6 /* KVCircleMenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KVCircleMenuButton.swift; sourceTree = "<group>"; };
 		33A663562C5272B300A6AAC6 /* KVCircleHomeMenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KVCircleHomeMenuButton.swift; sourceTree = "<group>"; };
 		33A663572C5272B300A6AAC6 /* KVCircleMenuAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KVCircleMenuAnimator.swift; sourceTree = "<group>"; };
 		33A6635C2C5272E000A6AAC6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		33A6635D2C5272E000A6AAC6 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		33A663602C5272F100A6AAC6 /* ActorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorViewController.swift; sourceTree = "<group>"; };
 		33A663612C5272F100A6AAC6 /* ActorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActorViewController.xib; sourceTree = "<group>"; };
 		33A663642C5272FD00A6AAC6 /* StaticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticsViewController.swift; sourceTree = "<group>"; };
 		33A663652C5272FD00A6AAC6 /* StaticsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StaticsViewController.xib; sourceTree = "<group>"; };
+		33AED5A82C578A52005EEB39 /* HomeItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeItemCell.xib; sourceTree = "<group>"; };
+		33AED5A92C578A52005EEB39 /* HomeItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeItemCell.swift; sourceTree = "<group>"; };
+		33DF09B22C58F3F4009D323B /* ToastEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastEnum.swift; sourceTree = "<group>"; };
+		33DF09B42C58FD48009D323B /* ActivityIndicatorUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorUtility.swift; sourceTree = "<group>"; };
+		33DF09B62C58FE13009D323B /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 		47F2C9806B1082D5CA4D6B79 /* Pods-HN_Pra19_IOS_Movie_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HN_Pra19_IOS_Movie_App.release.xcconfig"; path = "Target Support Files/Pods-HN_Pra19_IOS_Movie_App/Pods-HN_Pra19_IOS_Movie_App.release.xcconfig"; sourceTree = "<group>"; };
 		B35DED75A3791F2F55229CCF /* Pods_HN_Pra19_IOS_Movie_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HN_Pra19_IOS_Movie_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2EA4C61F54FFCA2C1FC09B6 /* Pods-HN_Pra19_IOS_Movie_App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HN_Pra19_IOS_Movie_App.debug.xcconfig"; path = "Target Support Files/Pods-HN_Pra19_IOS_Movie_App/Pods-HN_Pra19_IOS_Movie_App.debug.xcconfig"; sourceTree = "<group>"; };
@@ -144,17 +156,17 @@
 		332EC4D42C5011E200B46ACC /* HN_Pra19_IOS_Movie_App */ = {
 			isa = PBXGroup;
 			children = (
-				337447982C53A25B00D01D1D /* Model */,
-				337447972C53A25500D01D1D /* Service */,
-				3361D6E02C50D4C9002E3923 /* View */,
 				332EC4EE2C50124000B46ACC /* Apps */,
-				332EC4E92C50124000B46ACC /* Resource */,
-				332EC4F12C50124000B46ACC /* Utils */,
-				332EC4DB2C5011E200B46ACC /* Main.storyboard */,
 				332EC4DE2C5011E300B46ACC /* Assets.xcassets */,
-				332EC4E02C5011E300B46ACC /* LaunchScreen.storyboard */,
-				332EC4E32C5011E300B46ACC /* Info.plist */,
 				3387D02E2C5780BF00C96B7D /* Config.xcconfig */,
+				332EC4E32C5011E300B46ACC /* Info.plist */,
+				332EC4E02C5011E300B46ACC /* LaunchScreen.storyboard */,
+				332EC4DB2C5011E200B46ACC /* Main.storyboard */,
+				337447982C53A25B00D01D1D /* Model */,
+				332EC4E92C50124000B46ACC /* Resource */,
+				337447972C53A25500D01D1D /* Service */,
+				332EC4F12C50124000B46ACC /* Utils */,
+				3361D6E02C50D4C9002E3923 /* View */,
 			);
 			path = HN_Pra19_IOS_Movie_App;
 			sourceTree = "<group>";
@@ -182,6 +194,7 @@
 		332EC4F12C50124000B46ACC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				33DF09B12C58F3EB009D323B /* Enums */,
 				33A663532C5272B300A6AAC6 /* KVCircleMenu */,
 				332EC4F22C50124000B46ACC /* Constants.swift */,
 				332EC4F32C50124000B46ACC /* NibLoadableView.swift */,
@@ -193,6 +206,8 @@
 				332EC4FA2C50124000B46ACC /* GlobalFunctions.swift */,
 				332EC4FC2C50124000B46ACC /* ToastView.swift */,
 				3387D02F2C5781D500C96B7D /* Enviroment.swift */,
+				33DF09B42C58FD48009D323B /* ActivityIndicatorUtility.swift */,
+				33DF09B62C58FE13009D323B /* ImageCacheManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -200,13 +215,10 @@
 		3361D6E02C50D4C9002E3923 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3361D6E12C50D4DF002E3923 /* CustomNavigationViewController.swift */,
-				33A6635C2C5272E000A6AAC6 /* HomeViewController.swift */,
-				33A6635D2C5272E000A6AAC6 /* HomeViewController.xib */,
-				33A663602C5272F100A6AAC6 /* ActorViewController.swift */,
-				33A663612C5272F100A6AAC6 /* ActorViewController.xib */,
-				33A663642C5272FD00A6AAC6 /* StaticsViewController.swift */,
-				33A663652C5272FD00A6AAC6 /* StaticsViewController.xib */,
+				33AED5A52C5789E0005EEB39 /* Base */,
+				33AED5A62C5789EB005EEB39 /* Home */,
+				33AED5AC2C578A86005EEB39 /* Actor */,
+				33AED5AD2C578A8E005EEB39 /* Statistics */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -252,6 +264,60 @@
 			path = KVCircleMenu;
 			sourceTree = "<group>";
 		};
+		33AED5A52C5789E0005EEB39 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				3387D03B2C57870E00C96B7D /* BaseViewController.swift */,
+				3361D6E12C50D4DF002E3923 /* CustomNavigationViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		33AED5A62C5789EB005EEB39 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				33AED5A72C578A12005EEB39 /* Cell */,
+				33A6635C2C5272E000A6AAC6 /* HomeViewController.swift */,
+				3387D03D2C57874C00C96B7D /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		33AED5A72C578A12005EEB39 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				33AED5A92C578A52005EEB39 /* HomeItemCell.swift */,
+				33AED5A82C578A52005EEB39 /* HomeItemCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		33AED5AC2C578A86005EEB39 /* Actor */ = {
+			isa = PBXGroup;
+			children = (
+				33A663602C5272F100A6AAC6 /* ActorViewController.swift */,
+				33A663612C5272F100A6AAC6 /* ActorViewController.xib */,
+			);
+			path = Actor;
+			sourceTree = "<group>";
+		};
+		33AED5AD2C578A8E005EEB39 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				33A663642C5272FD00A6AAC6 /* StaticsViewController.swift */,
+				33A663652C5272FD00A6AAC6 /* StaticsViewController.xib */,
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
+		33DF09B12C58F3EB009D323B /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				33DF09B22C58F3F4009D323B /* ToastEnum.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		8A55D41AF038A3D929DC4E08 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,7 +346,6 @@
 				332EC4CE2C5011E200B46ACC /* Sources */,
 				332EC4CF2C5011E200B46ACC /* Frameworks */,
 				332EC4D02C5011E200B46ACC /* Resources */,
-				9F6BAE44DF9DCD5611F00B36 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -332,13 +397,14 @@
 				33A663672C5272FD00A6AAC6 /* StaticsViewController.xib in Resources */,
 				332EC4E22C5011E300B46ACC /* LaunchScreen.storyboard in Resources */,
 				332EC4FF2C50124000B46ACC /* AdventPro-Medium.ttf in Resources */,
+				33AED5AA2C578A52005EEB39 /* HomeItemCell.xib in Resources */,
 				332EC4DF2C5011E300B46ACC /* Assets.xcassets in Resources */,
 				33A663632C5272F100A6AAC6 /* ActorViewController.xib in Resources */,
 				332EC4DD2C5011E200B46ACC /* Main.storyboard in Resources */,
 				332EC5002C50124000B46ACC /* AdventPro-Regular.ttf in Resources */,
+				3387D03E2C57874C00C96B7D /* HomeViewController.xib in Resources */,
 				332EC4FD2C50124000B46ACC /* AdventPro-Bold.ttf in Resources */,
 				332EC4FE2C50124000B46ACC /* AdventPro-SemiBold.ttf in Resources */,
-				33A6635F2C5272E000A6AAC6 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,23 +433,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9F6BAE44DF9DCD5611F00B36 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HN_Pra19_IOS_Movie_App/Pods-HN_Pra19_IOS_Movie_App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HN_Pra19_IOS_Movie_App/Pods-HN_Pra19_IOS_Movie_App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HN_Pra19_IOS_Movie_App/Pods-HN_Pra19_IOS_Movie_App-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -402,8 +451,10 @@
 				3374479A2C53A26300D01D1D /* APIService.swift in Sources */,
 				332EC50B2C50124000B46ACC /* GlobalFunctions.swift in Sources */,
 				337447A42C53A27000D01D1D /* CreditModel.swift in Sources */,
+				3387D03C2C57870E00C96B7D /* BaseViewController.swift in Sources */,
 				332EC5042C50124000B46ACC /* NibLoadableView.swift in Sources */,
 				3387D0292C577FAD00C96B7D /* SearchModel.swift in Sources */,
+				33DF09B32C58F3F4009D323B /* ToastEnum.swift in Sources */,
 				332EC5082C50124000B46ACC /* UserDefaults.swift in Sources */,
 				332EC50A2C50124000B46ACC /* Utils.swift in Sources */,
 				33A6635B2C5272B300A6AAC6 /* KVCircleMenuAnimator.swift in Sources */,
@@ -412,6 +463,7 @@
 				337447A22C53A27000D01D1D /* VideoTrailerModel.swift in Sources */,
 				33A663592C5272B300A6AAC6 /* KVCircleMenuButton.swift in Sources */,
 				3387D0342C57839300C96B7D /* PeopleKnownForModel.swift in Sources */,
+				33DF09B52C58FD48009D323B /* ActivityIndicatorUtility.swift in Sources */,
 				33A663622C5272F100A6AAC6 /* ActorViewController.swift in Sources */,
 				3387D0322C57837A00C96B7D /* ActorModel.swift in Sources */,
 				3387D02D2C577FED00C96B7D /* BackdropModel.swift in Sources */,
@@ -425,6 +477,8 @@
 				3387D03A2C57845D00C96B7D /* VideoModel.swift in Sources */,
 				337447A32C53A27000D01D1D /* MoviesModel.swift in Sources */,
 				332EC5092C50124000B46ACC /* UIFontExtension.swift in Sources */,
+				33AED5AB2C578A52005EEB39 /* HomeItemCell.swift in Sources */,
+				33DF09B72C58FE13009D323B /* ImageCacheManager.swift in Sources */,
 				3387D0302C5781D500C96B7D /* Enviroment.swift in Sources */,
 				332EC5032C50124000B46ACC /* Constants.swift in Sources */,
 			);
@@ -583,10 +637,12 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HN_Pra19_IOS_Movie_App/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access Photos to add image to library!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -616,10 +672,12 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HN_Pra19_IOS_Movie_App/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access Photos to add image to library!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

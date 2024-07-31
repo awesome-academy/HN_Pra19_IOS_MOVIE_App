@@ -6,19 +6,17 @@
 //
 
 import Foundation
-import ProgressHUD
-import SDWebImage
 
 class Utils {
-    static func showLoading(_ text: String? = nil,_ interaction: Bool = false) {
-        ProgressHUD.animate(text, interaction: interaction)
+    static func showLoading() {
+        ActivityIndicatorUtility.show()
     }
     
     static func hideLoading() {
-        ProgressHUD.dismiss()
+        ActivityIndicatorUtility.hide()
     }
     
     static func clearCache() {
-        SDImageCache.shared.clearMemory()
+        ImageCacheManager.shared.clearAllCache()
     }
 }
