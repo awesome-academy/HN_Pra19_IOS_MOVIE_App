@@ -46,6 +46,10 @@
 		3387D03A2C57845D00C96B7D /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3387D0392C57845D00C96B7D /* VideoModel.swift */; };
 		3387D03C2C57870E00C96B7D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3387D03B2C57870E00C96B7D /* BaseViewController.swift */; };
 		3387D03E2C57874C00C96B7D /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3387D03D2C57874C00C96B7D /* HomeViewController.xib */; };
+		3391FFF62C59E46400890CA2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3391FFF42C59E46400890CA2 /* SearchViewController.swift */; };
+		3391FFF72C59E46400890CA2 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3391FFF52C59E46400890CA2 /* SearchViewController.xib */; };
+		3391FFFB2C59E47B00890CA2 /* SearchItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3391FFF92C59E47B00890CA2 /* SearchItemCell.xib */; };
+		3391FFFC2C59E47B00890CA2 /* SearchItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3391FFFA2C59E47B00890CA2 /* SearchItemCell.swift */; };
 		33A663582C5272B300A6AAC6 /* KVCircleSubMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A663542C5272B300A6AAC6 /* KVCircleSubMenuButton.swift */; };
 		33A663592C5272B300A6AAC6 /* KVCircleMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A663552C5272B300A6AAC6 /* KVCircleMenuButton.swift */; };
 		33A6635A2C5272B300A6AAC6 /* KVCircleHomeMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A663562C5272B300A6AAC6 /* KVCircleHomeMenuButton.swift */; };
@@ -104,6 +108,10 @@
 		3387D0392C57845D00C96B7D /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
 		3387D03B2C57870E00C96B7D /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		3387D03D2C57874C00C96B7D /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		3391FFF42C59E46400890CA2 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		3391FFF52C59E46400890CA2 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		3391FFF92C59E47B00890CA2 /* SearchItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchItemCell.xib; sourceTree = "<group>"; };
+		3391FFFA2C59E47B00890CA2 /* SearchItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchItemCell.swift; sourceTree = "<group>"; };
 		33A663542C5272B300A6AAC6 /* KVCircleSubMenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KVCircleSubMenuButton.swift; sourceTree = "<group>"; };
 		33A663552C5272B300A6AAC6 /* KVCircleMenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KVCircleMenuButton.swift; sourceTree = "<group>"; };
 		33A663562C5272B300A6AAC6 /* KVCircleHomeMenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KVCircleHomeMenuButton.swift; sourceTree = "<group>"; };
@@ -219,6 +227,7 @@
 				33AED5A62C5789EB005EEB39 /* Home */,
 				33AED5AC2C578A86005EEB39 /* Actor */,
 				33AED5AD2C578A8E005EEB39 /* Statistics */,
+				3391FFF32C59E44E00890CA2 /* Search */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -251,6 +260,25 @@
 				3387D0392C57845D00C96B7D /* VideoModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		3391FFF32C59E44E00890CA2 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				3391FFF82C59E47100890CA2 /* Cell */,
+				3391FFF42C59E46400890CA2 /* SearchViewController.swift */,
+				3391FFF52C59E46400890CA2 /* SearchViewController.xib */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		3391FFF82C59E47100890CA2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3391FFFA2C59E47B00890CA2 /* SearchItemCell.swift */,
+				3391FFF92C59E47B00890CA2 /* SearchItemCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		33A663532C5272B300A6AAC6 /* KVCircleMenu */ = {
@@ -396,11 +424,13 @@
 			files = (
 				33A663672C5272FD00A6AAC6 /* StaticsViewController.xib in Resources */,
 				332EC4E22C5011E300B46ACC /* LaunchScreen.storyboard in Resources */,
+				3391FFF72C59E46400890CA2 /* SearchViewController.xib in Resources */,
 				332EC4FF2C50124000B46ACC /* AdventPro-Medium.ttf in Resources */,
 				33AED5AA2C578A52005EEB39 /* HomeItemCell.xib in Resources */,
 				332EC4DF2C5011E300B46ACC /* Assets.xcassets in Resources */,
 				33A663632C5272F100A6AAC6 /* ActorViewController.xib in Resources */,
 				332EC4DD2C5011E200B46ACC /* Main.storyboard in Resources */,
+				3391FFFB2C59E47B00890CA2 /* SearchItemCell.xib in Resources */,
 				332EC5002C50124000B46ACC /* AdventPro-Regular.ttf in Resources */,
 				3387D03E2C57874C00C96B7D /* HomeViewController.xib in Resources */,
 				332EC4FD2C50124000B46ACC /* AdventPro-Bold.ttf in Resources */,
@@ -460,6 +490,7 @@
 				33A6635B2C5272B300A6AAC6 /* KVCircleMenuAnimator.swift in Sources */,
 				3387D0272C577F8300C96B7D /* CastModel.swift in Sources */,
 				332EC5072C50124000B46ACC /* Extensions.swift in Sources */,
+				3391FFFC2C59E47B00890CA2 /* SearchItemCell.swift in Sources */,
 				337447A22C53A27000D01D1D /* VideoTrailerModel.swift in Sources */,
 				33A663592C5272B300A6AAC6 /* KVCircleMenuButton.swift in Sources */,
 				3387D0342C57839300C96B7D /* PeopleKnownForModel.swift in Sources */,
@@ -476,6 +507,7 @@
 				33A6635A2C5272B300A6AAC6 /* KVCircleHomeMenuButton.swift in Sources */,
 				3387D03A2C57845D00C96B7D /* VideoModel.swift in Sources */,
 				337447A32C53A27000D01D1D /* MoviesModel.swift in Sources */,
+				3391FFF62C59E46400890CA2 /* SearchViewController.swift in Sources */,
 				332EC5092C50124000B46ACC /* UIFontExtension.swift in Sources */,
 				33AED5AB2C578A52005EEB39 /* HomeItemCell.swift in Sources */,
 				33DF09B72C58FE13009D323B /* ImageCacheManager.swift in Sources */,

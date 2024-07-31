@@ -125,7 +125,8 @@ final class HomeViewController: BaseViewController {
     }
     
     @IBAction func searchClick(_ sender: Any) {
-        
+        let vc = SearchViewController()
+        push(vc)
     }
 }
 
