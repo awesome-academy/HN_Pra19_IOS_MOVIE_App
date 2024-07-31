@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SearchModel: Codable {
+class SearchModel: Codable {
     let adult: Bool?
     let backdropPath: String?
     let genre_ids: [Int]?
