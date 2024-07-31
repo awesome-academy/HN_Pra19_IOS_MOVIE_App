@@ -6,54 +6,70 @@
 //
 
 import Foundation
-import Alamofire
+import UIKit
 
 class APIService {
     
     static let shared = APIService()
     
-    private var headers: HTTPHeaders {
-        var headers = HTTPHeaders()
-        headers.add(name: "Content-Type", value: "application/x-www-form-urlencoded")
-        return headers
-    }
-    
     static let baseURL = "https://api.themoviedb.org/3"
     static let baseImage = "https://image.tmdb.org/t/p/w500"
     static let API_KEY = Environment.apiKey
     
-    private var alamofireManager: Alamofire.Session
-    
-    private init() {
-        let configuration = URLSessionConfiguration.default
-        alamofireManager = Alamofire.Session(configuration: configuration)
-    }
-    
     func request<T: Decodable>(_ path: String,
-                               _ method: HTTPMethod,
-                               parameters: Parameters? = nil,
-                               of: T.Type,
-                               encoding: ParameterEncoding = URLEncoding.default,
+                               parameters: [String: Any]? = nil,
+                               of type: T.Type,
                                success: @escaping (T) -> Void,
-                               failure: @escaping (_ code: Int, _ message: String) -> Void) {
+                               failure: @escaping (_ message: String) -> Void) {
         
-        alamofireManager.request(path,
-                                 method: method,
-                                 parameters: parameters,
-                                 encoding: encoding,
-                                 headers: headers)
-        .validate(statusCode: 200..<300)
-        .responseDecodable(of: T.self) { response in
-            switch response.result {
-            case let .success(data):
-                success(data)
-            case let .failure(error):
-                print(error.localizedDescription)
-                let code = error.responseCode ?? 0
+        guard var urlComponents = URLComponents(string: path) else {
+            failure("Invalid URL")
+            return
+        }
+
+        if let parameters = parameters {
+            urlComponents.queryItems = parameters.map { URLQueryItem(name: $0.key, value: "\($0.value)") }
+        }
+
+        guard let url = urlComponents.url else {
+            failure("Invalid URL after adding parameters")
+            return
+        }
+
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "GET"
+        urlRequest.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        
+        let session = URLSession.shared
+        
+        let task = session.dataTask(with: urlRequest) { data, response, error in
+            if let error = error {
                 let message = error.localizedDescription
-                failure(code, message)
+                failure(message)
+                return
+            }
+            
+            guard let httpResponse = response as? HTTPURLResponse,
+                  (200...299).contains(httpResponse.statusCode) else {
+                failure("Server error or invalid response")
+                return
+            }
+            
+            guard let data = data else {
+                failure("No data received")
+                return
+            }
+            
+            do {
+                let decoder = JSONDecoder()
+                let responseData = try decoder.decode(T.self, from: data)
+                success(responseData)
+            } catch {
+                failure("Decoding error: \(error.localizedDescription)")
             }
         }
+        
+        task.resume()
     }
 }
 
@@ -67,11 +83,10 @@ extension APIService {
                                       "page": page,
                                       "query": query]
         request(APIPath.search.getURL(),
-                .get,
                 parameters: params,
                 of: SearchResultModel.self) { value in
             success(value)
-        } failure: { code, mesage in
+        } failure: { mesage in
             failure(mesage)
         }
     }
@@ -86,11 +101,10 @@ extension APIService {
         : APIPath.creditTV(id: movieId)
         
         request(path.getURL(),
-                .get,
                 parameters: params,
                 of: CreditsModel.self) { result in
             success(result)
-        } failure: { code, message in
+        } failure: { message in
             failure(message)
         }
     }
@@ -105,11 +119,10 @@ extension APIService {
         : APIPath.imagesTV(id: movieId)
         
         request(path.getURL(),
-                .get,
                 parameters: params,
                 of: ImagesModel.self) { result in
             success(result)
-        } failure: { code, message in
+        } failure: { message in
             failure(message)
         }
     }
@@ -124,11 +137,10 @@ extension APIService {
         : APIPath.videosTV(id: id)
         
         request(path.getURL(),
-                .get,
                 parameters: params,
                 of: VideosTrailerModel.self) { value in
             success(value.results)
-        } failure: { code, mesage in
+        } failure: { mesage in
             failure(mesage)
         }
     }
@@ -139,11 +151,10 @@ extension APIService {
         let params: [String : Any] = ["api_key":
                                         APIService.API_KEY]
         request(APIPath.peopleDetail(id: id).getURL(),
-                .get,
                 parameters: params,
                 of: ActorModel.self) { value in
             success(value)
-        } failure: { code, mesage in
+        } failure: { mesage in
             failure(mesage)
         }
     }
@@ -156,11 +167,10 @@ extension APIService {
                                       "page": page]
         
         request(APIPath.peoplePopular.getURL(),
-                .get,
                 parameters: params,
                 of: ActorResultModel.self) { value in
             success(value)
-        } failure: { code, mesage in
+        } failure: { mesage in
             failure(mesage)
         }
     }
@@ -169,9 +179,11 @@ extension APIService {
                           success: @escaping ([SearchModel]) -> Void,
                           failure: @escaping (String) -> Void) {
           let params: [String : Any] = ["api_key": APIService.API_KEY]
-          request(APIPath.combinedCredit(id: id).getURL(), .get, parameters: params, of: CombinedCreditModel.self) { value in
+          request(APIPath.combinedCredit(id: id).getURL(),
+                  parameters: params,
+                  of: CombinedCreditModel.self) { value in
               success(value.cast)
-          } failure: { code, mesage in
+          } failure: { mesage in
               failure(mesage)
           }
       }
@@ -181,9 +193,11 @@ extension APIService {
                    failure: @escaping (String) -> Void) {
         let params: [String : Any] = ["api_key": APIService.API_KEY,
                                       "page": page]
-        request(APIPath.popularMovie.getURL(), .get, parameters: params, of: SearchResultModel.self) { value in
+        request(APIPath.popularMovie.getURL(),
+                parameters: params,
+                of: SearchResultModel.self) { value in
             success(value)
-        } failure: { code, mesage in
+        } failure: { mesage in
             failure(mesage)
         }
     }
@@ -195,11 +209,10 @@ extension APIService {
                                       "page": page]
         
         request(APIPath.popularTV.getURL(),
-                .get,
                 parameters: params,
                 of: SearchResultModel.self) { value in
             success(value)
-        } failure: { code, mesage in
+        } failure: { mesage in
             failure(mesage)
         }
     }

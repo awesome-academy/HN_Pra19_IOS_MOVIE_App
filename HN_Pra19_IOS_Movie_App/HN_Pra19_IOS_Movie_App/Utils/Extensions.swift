@@ -7,8 +7,6 @@
 
 import Foundation
 import UIKit
-import SDWebImage
-import SnapKit
 
 extension UIColor {
     
@@ -101,73 +99,6 @@ extension String {
     }
 }
 
-
-extension UICollectionView {
-    //Loadmore
-    var triggerOffset: CGFloat {
-        return 80.0
-    }
-    
-    var canShowLoadmore: Bool {
-        let contentOffset = contentOffset
-        let visibleHeight = frame.height - contentInset.top - contentInset.bottom
-        let yOffset = contentOffset.y + contentInset.top + visibleHeight
-        let contentHeight = contentSize.height - triggerOffset
-        if yOffset >= contentHeight,
-           contentHeight >= bounds.height {
-            return true
-        }
-        
-        return false
-    }
-    
-    var canShowLoadMoreHorizontal: Bool {
-        let contentOffset = contentOffset
-        let visibleHeight = frame.width - contentInset.left - contentInset.right
-        let xOffset = contentOffset.x + contentInset.left + contentInset.right + visibleHeight
-        let contentWidth = contentSize.width - triggerOffset
-        if xOffset >= contentWidth,
-           contentWidth >= bounds.width {
-            return true
-        }
-        
-        return false
-    }
-    
-    func addLoadMore() {
-        let activityIndicator = UIActivityIndicatorView()
-        if #available(iOS 13.0, *) {
-            activityIndicator.style = .medium
-        } else {
-            activityIndicator.style = .gray
-        }
-        activityIndicator.hidesWhenStopped = true
-        addSubview(activityIndicator)
-        activityIndicator.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().offset(-50)
-            make.centerX.equalToSuperview()
-            make.width.height.equalTo(50)
-        }
-    }
-    
-    func showLoadMore() {
-        for sub in subviews {
-            if let indicator  = sub as? UIActivityIndicatorView {
-                indicator.startAnimating()
-            }
-        }
-    }
-    
-    func hideLoadMore() {
-        for sub in subviews {
-            if let indicator  = sub as? UIActivityIndicatorView {
-                indicator.stopAnimating()
-            }
-        }
-    }
-}
-
-
 extension UIApplication {
     
     var safeInset: UIEdgeInsets? {
@@ -245,20 +176,22 @@ extension UIView {
 }
 
 extension UIImageView {
-    func setImage(_ urlStr: String, _ placeholder: UIImage?, completion: (() -> Void)? = nil) {
+    func setImage(_ urlStr: String, _ placeholder: UIImage?, completion: ((UIImage?) -> Void)? = nil) {
         guard let url = URL(string: urlStr) else {
             return
         }
-        self.sd_imageIndicator = SDWebImageActivityIndicator.gray
-        self.sd_setImage(with: url, placeholderImage: placeholder) { _, _, _, _ in
-            completion?()
+        ImageCacheManager.shared.loadImage(from: url) { [weak self] image in
+            guard let self = self else { return }
+            self.image = image
+            completion?(image)
         }
     }
     
-    func setImage(_ url: URL, _ placeholder: UIImage?, completion: (() -> Void)? = nil) {
-        self.sd_imageIndicator = SDWebImageActivityIndicator.gray
-        self.sd_setImage(with: url, placeholderImage: placeholder) { _, _, _, _ in
-            completion?()
+    func setImage(_ url: URL, _ placeholder: UIImage?, completion: ((UIImage?) -> Void)? = nil) {
+        ImageCacheManager.shared.loadImage(from: url) { [weak self] image in
+            guard let self = self else { return }
+            self.image = image
+            completion?(image)
         }
     }
 }

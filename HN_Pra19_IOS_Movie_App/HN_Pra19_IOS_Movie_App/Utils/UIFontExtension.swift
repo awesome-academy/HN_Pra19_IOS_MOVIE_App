@@ -24,22 +24,18 @@ extension UIFontDescriptor.AttributeName {
 extension UIFont {
     
     @objc class func mySystemFont(ofSize size: CGFloat) -> UIFont {
-        print("mySystemFont called")
         return UIFont(name: AppFontName.regular, size: size)!
     }
     
     @objc class func myBoldSystemFont(ofSize size: CGFloat) -> UIFont {
-        print("myBoldSystemFont called")
         return UIFont(name: AppFontName.bold, size: size)!
     }
     
     @objc class func myMediumSystemFont(ofSize size: CGFloat) -> UIFont {
-        print("myMediumSystemFont called")
         return UIFont(name: AppFontName.medium, size: size)!
     }
     
     @objc class func myItalicSystemFont(ofSize size: CGFloat) -> UIFont {
-        print("myItalicSystemFont called")
         return UIFont(name: AppFontName.regular, size: size)!
     }
     

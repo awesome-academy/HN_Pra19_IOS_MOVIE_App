@@ -3,7 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>${API_KEY}</string>
+	<string>$(API_KEY)</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>AdventPro-Bold.ttf</string>
+		<string>AdventPro-Medium.ttf</string>
+		<string>AdventPro-Regular.ttf</string>
+		<string>AdventPro-SemiBold.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -23,16 +30,5 @@
 			</array>
 		</dict>
 	</dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>AdventPro-Bold.ttf</string>
-		<string>AdventPro-Medium.ttf</string>
-		<string>AdventPro-Regular.ttf</string>
-		<string>AdventPro-SemiBold.ttf</string>
-	</array>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Please allow access Photos to add image to library!</string>
-	<key>UIUserInterfaceStyle</key>
-	<string>Light</string>
 </dict>
 </plist>
