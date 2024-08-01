@@ -181,17 +181,25 @@ extension UIImageView {
             return
         }
         ImageCacheManager.shared.loadImage(from: url) { [weak self] image in
-            guard let self = self else { return }
-            self.image = image
-            completion?(image)
+            guard let self, let img = image else {
+                self?.image = placeholder
+                completion?(placeholder)
+                return
+            }
+            self.image = img
+            completion?(img)
         }
     }
     
     func setImage(_ url: URL, _ placeholder: UIImage?, completion: ((UIImage?) -> Void)? = nil) {
         ImageCacheManager.shared.loadImage(from: url) { [weak self] image in
-            guard let self = self else { return }
-            self.image = image
-            completion?(image)
+            guard let self, let img = image else {
+                self?.image = placeholder
+                completion?(placeholder)
+                return
+            }
+            self.image = img
+            completion?(img)
         }
     }
 }
