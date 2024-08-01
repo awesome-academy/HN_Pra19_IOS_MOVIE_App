@@ -109,6 +109,11 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = MovieDetailViewController(item: data[indexPath.row])
+        push(vc)
+    }
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if tableView.canShowLoadmore, canLoadMore, !isLoadMore {
             isLoadMore = true
