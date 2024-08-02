@@ -9,9 +9,9 @@ import UIKit
 
 class BaseViewController: UIViewController {
     
-    let colums: CGFloat = isIphone() ? 3 : 5
-    let spacing: CGFloat = isIphone() ? 12 : 25
-    let padding: CGFloat = isIphone() ? 17 : 40
+    var colums: CGFloat = isIphone() ? 3 : 5
+    var spacing: CGFloat = isIphone() ? 12 : 25
+    var padding: CGFloat = isIphone() ? 17 : 40
     
     override func viewDidLoad() {
         super.viewDidLoad()
