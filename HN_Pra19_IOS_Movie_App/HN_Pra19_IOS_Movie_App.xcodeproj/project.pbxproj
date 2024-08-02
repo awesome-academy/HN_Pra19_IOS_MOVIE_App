@@ -30,6 +30,8 @@
 		336174972C5CBAB800AFC7E0 /* ActorDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 336174952C5CBAB800AFC7E0 /* ActorDetailViewController.xib */; };
 		3361749B2C5CBADD00AFC7E0 /* ActorDetailInfoItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336174992C5CBADD00AFC7E0 /* ActorDetailInfoItemCell.swift */; };
 		3361749C2C5CBADD00AFC7E0 /* ActorDetailInfoItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3361749A2C5CBADD00AFC7E0 /* ActorDetailInfoItemCell.xib */; };
+		336174A02C5CEE6900AFC7E0 /* PlayTraillerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3361749E2C5CEE6900AFC7E0 /* PlayTraillerViewController.swift */; };
+		336174A12C5CEE6900AFC7E0 /* PlayTraillerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3361749F2C5CEE6900AFC7E0 /* PlayTraillerViewController.xib */; };
 		3361D6E22C50D4DF002E3923 /* CustomNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3361D6E12C50D4DF002E3923 /* CustomNavigationViewController.swift */; };
 		3374479A2C53A26300D01D1D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337447992C53A26300D01D1D /* APIService.swift */; };
 		337447A12C53A27000D01D1D /* SearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374479B2C53A26F00D01D1D /* SearchResultModel.swift */; };
@@ -107,6 +109,8 @@
 		336174952C5CBAB800AFC7E0 /* ActorDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActorDetailViewController.xib; sourceTree = "<group>"; };
 		336174992C5CBADD00AFC7E0 /* ActorDetailInfoItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorDetailInfoItemCell.swift; sourceTree = "<group>"; };
 		3361749A2C5CBADD00AFC7E0 /* ActorDetailInfoItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActorDetailInfoItemCell.xib; sourceTree = "<group>"; };
+		3361749E2C5CEE6900AFC7E0 /* PlayTraillerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayTraillerViewController.swift; sourceTree = "<group>"; };
+		3361749F2C5CEE6900AFC7E0 /* PlayTraillerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayTraillerViewController.xib; sourceTree = "<group>"; };
 		3361D6E12C50D4DF002E3923 /* CustomNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationViewController.swift; sourceTree = "<group>"; };
 		337447992C53A26300D01D1D /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		3374479B2C53A26F00D01D1D /* SearchResultModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultModel.swift; sourceTree = "<group>"; };
@@ -271,6 +275,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		3361749D2C5CEE5A00AFC7E0 /* PreviewTrailer */ = {
+			isa = PBXGroup;
+			children = (
+				3361749E2C5CEE6900AFC7E0 /* PlayTraillerViewController.swift */,
+				3361749F2C5CEE6900AFC7E0 /* PlayTraillerViewController.xib */,
+			);
+			path = PreviewTrailer;
+			sourceTree = "<group>";
+		};
 		3361D6E02C50D4C9002E3923 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +294,7 @@
 				33AED5AD2C578A8E005EEB39 /* Statistics */,
 				3391FFF32C59E44E00890CA2 /* Search */,
 				3391FFFD2C59EC3400890CA2 /* MovieDetail */,
+				3361749D2C5CEE5A00AFC7E0 /* PreviewTrailer */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -505,6 +519,7 @@
 				3391000E2C59EC9C00890CA2 /* EmptyItemCell.xib in Resources */,
 				339100012C59EC4600890CA2 /* MovieDetailViewController.xib in Resources */,
 				33A663672C5272FD00A6AAC6 /* StaticsViewController.xib in Resources */,
+				336174A12C5CEE6900AFC7E0 /* PlayTraillerViewController.xib in Resources */,
 				339100142C59EC9C00890CA2 /* MovieDetailHeaderView.xib in Resources */,
 				332EC4E22C5011E300B46ACC /* LaunchScreen.storyboard in Resources */,
 				3391FFF72C59E46400890CA2 /* SearchViewController.xib in Resources */,
@@ -572,6 +587,7 @@
 				332EC50B2C50124000B46ACC /* GlobalFunctions.swift in Sources */,
 				337447A42C53A27000D01D1D /* CreditModel.swift in Sources */,
 				3387D03C2C57870E00C96B7D /* BaseViewController.swift in Sources */,
+				336174A02C5CEE6900AFC7E0 /* PlayTraillerViewController.swift in Sources */,
 				332EC5042C50124000B46ACC /* NibLoadableView.swift in Sources */,
 				3387D0292C577FAD00C96B7D /* SearchModel.swift in Sources */,
 				33DF09B32C58F3F4009D323B /* ToastEnum.swift in Sources */,

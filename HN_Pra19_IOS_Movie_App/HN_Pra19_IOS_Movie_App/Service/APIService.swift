@@ -12,8 +12,8 @@ class APIService {
     
     static let shared = APIService()
     
-    static let baseURL = "https://api.themoviedb.org/3"
-    static let baseImage = "https://image.tmdb.org/t/p/w500"
+    static let baseURL = Constants.BASE_URL
+    static let baseImage = Constants.BASE_IMAGE
     static let API_KEY = Environment.apiKey
     
     func request<T: Decodable>(_ path: String,

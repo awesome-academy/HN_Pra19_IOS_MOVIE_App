@@ -132,6 +132,10 @@ extension MovieDetailViewController: UICollectionViewDataSource, UICollectionVie
             cell.onBackClick = { [weak self] in
                 self?.handlePop()
             }
+            
+            cell.onPlayTrailerClick = { [weak self] in
+                self?.handlePlayTrailer()
+            }
             return cell
         } else if state == .billCast {
             if billCasts.isEmpty {
@@ -266,5 +270,10 @@ extension MovieDetailViewController: UICollectionViewDataSource, UICollectionVie
 extension MovieDetailViewController {
     private func handlePop() {
         pop()
+    }
+    
+    private func handlePlayTrailer() {
+        let vc = PlayTraillerViewController(id: item.id, type: item.getType())
+        push(vc)
     }
 }
