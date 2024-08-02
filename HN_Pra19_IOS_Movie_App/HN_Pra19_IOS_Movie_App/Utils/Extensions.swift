@@ -241,3 +241,22 @@ extension UITableView {
         tableFooterView = nil
     }
 }
+
+extension UICollectionView {
+    //Loadmore
+    var triggerOffset: CGFloat {
+        return 80.0
+    }
+    
+    var canShowLoadmore: Bool {
+        let contentOffset = contentOffset
+        let visibleHeight = frame.height - contentInset.top - contentInset.bottom
+        let yOffset = contentOffset.y + contentInset.top + visibleHeight
+        let contentHeight = contentSize.height - triggerOffset
+        if yOffset >= contentHeight,
+           contentHeight >= bounds.height {
+            return true
+        }
+        return false
+    }
+}
