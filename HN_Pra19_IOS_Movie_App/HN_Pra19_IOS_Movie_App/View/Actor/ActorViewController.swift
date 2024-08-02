@@ -113,6 +113,17 @@ extension ActorViewController: UICollectionViewDataSource, UICollectionViewDeleg
         return spacing
     }
     
+    func collectionView(_ collectionView: UICollectionView,
+                        didSelectItemAt indexPath: IndexPath) {
+        guard let id = data[indexPath.row].id else {
+            ToastView.showToast(message: "Can't open detail actor!", type: .warning)
+            return
+        }
+        
+        let vc = ActorDetailViewController(id: id)
+        push(vc)
+    }
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if collectionView.canShowLoadmore,
            canLoadMore,

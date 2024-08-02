@@ -26,6 +26,10 @@
 		332EC50A2C50124000B46ACC /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332EC4F92C50124000B46ACC /* Utils.swift */; };
 		332EC50B2C50124000B46ACC /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332EC4FA2C50124000B46ACC /* GlobalFunctions.swift */; };
 		332EC50D2C50124000B46ACC /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332EC4FC2C50124000B46ACC /* ToastView.swift */; };
+		336174962C5CBAB800AFC7E0 /* ActorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336174942C5CBAB800AFC7E0 /* ActorDetailViewController.swift */; };
+		336174972C5CBAB800AFC7E0 /* ActorDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 336174952C5CBAB800AFC7E0 /* ActorDetailViewController.xib */; };
+		3361749B2C5CBADD00AFC7E0 /* ActorDetailInfoItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336174992C5CBADD00AFC7E0 /* ActorDetailInfoItemCell.swift */; };
+		3361749C2C5CBADD00AFC7E0 /* ActorDetailInfoItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3361749A2C5CBADD00AFC7E0 /* ActorDetailInfoItemCell.xib */; };
 		3361D6E22C50D4DF002E3923 /* CustomNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3361D6E12C50D4DF002E3923 /* CustomNavigationViewController.swift */; };
 		3374479A2C53A26300D01D1D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337447992C53A26300D01D1D /* APIService.swift */; };
 		337447A12C53A27000D01D1D /* SearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3374479B2C53A26F00D01D1D /* SearchResultModel.swift */; };
@@ -99,6 +103,10 @@
 		332EC4F92C50124000B46ACC /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		332EC4FA2C50124000B46ACC /* GlobalFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
 		332EC4FC2C50124000B46ACC /* ToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		336174942C5CBAB800AFC7E0 /* ActorDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorDetailViewController.swift; sourceTree = "<group>"; };
+		336174952C5CBAB800AFC7E0 /* ActorDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActorDetailViewController.xib; sourceTree = "<group>"; };
+		336174992C5CBADD00AFC7E0 /* ActorDetailInfoItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorDetailInfoItemCell.swift; sourceTree = "<group>"; };
+		3361749A2C5CBADD00AFC7E0 /* ActorDetailInfoItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActorDetailInfoItemCell.xib; sourceTree = "<group>"; };
 		3361D6E12C50D4DF002E3923 /* CustomNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationViewController.swift; sourceTree = "<group>"; };
 		337447992C53A26300D01D1D /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		3374479B2C53A26F00D01D1D /* SearchResultModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultModel.swift; sourceTree = "<group>"; };
@@ -244,9 +252,29 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		336174932C5CBA9100AFC7E0 /* ActorDetail */ = {
+			isa = PBXGroup;
+			children = (
+				336174982C5CBAD400AFC7E0 /* Cell */,
+				336174942C5CBAB800AFC7E0 /* ActorDetailViewController.swift */,
+				336174952C5CBAB800AFC7E0 /* ActorDetailViewController.xib */,
+			);
+			path = ActorDetail;
+			sourceTree = "<group>";
+		};
+		336174982C5CBAD400AFC7E0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				336174992C5CBADD00AFC7E0 /* ActorDetailInfoItemCell.swift */,
+				3361749A2C5CBADD00AFC7E0 /* ActorDetailInfoItemCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		3361D6E02C50D4C9002E3923 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				336174932C5CBA9100AFC7E0 /* ActorDetail */,
 				33AED5A52C5789E0005EEB39 /* Base */,
 				33AED5A62C5789EB005EEB39 /* Home */,
 				33AED5AC2C578A86005EEB39 /* Actor */,
@@ -483,8 +511,10 @@
 				332EC4FF2C50124000B46ACC /* AdventPro-Medium.ttf in Resources */,
 				339100112C59EC9C00890CA2 /* MovieDetailInfoItemCell.xib in Resources */,
 				33AED5AA2C578A52005EEB39 /* HomeItemCell.xib in Resources */,
+				336174972C5CBAB800AFC7E0 /* ActorDetailViewController.xib in Resources */,
 				3391000D2C59EC9C00890CA2 /* ActorItemCell.xib in Resources */,
 				332EC4DF2C5011E300B46ACC /* Assets.xcassets in Resources */,
+				3361749C2C5CBADD00AFC7E0 /* ActorDetailInfoItemCell.xib in Resources */,
 				33A663632C5272F100A6AAC6 /* ActorViewController.xib in Resources */,
 				332EC4DD2C5011E200B46ACC /* Main.storyboard in Resources */,
 				3391FFFB2C59E47B00890CA2 /* SearchItemCell.xib in Resources */,
@@ -551,6 +581,7 @@
 				3387D0272C577F8300C96B7D /* CastModel.swift in Sources */,
 				332EC5072C50124000B46ACC /* Extensions.swift in Sources */,
 				339100002C59EC4600890CA2 /* MovieDetailViewController.swift in Sources */,
+				336174962C5CBAB800AFC7E0 /* ActorDetailViewController.swift in Sources */,
 				3391FFFC2C59E47B00890CA2 /* SearchItemCell.swift in Sources */,
 				337447A22C53A27000D01D1D /* VideoTrailerModel.swift in Sources */,
 				33A663592C5272B300A6AAC6 /* KVCircleMenuButton.swift in Sources */,
@@ -575,6 +606,7 @@
 				339100162C59EC9C00890CA2 /* MovieDetailHeaderView.swift in Sources */,
 				33AED5AB2C578A52005EEB39 /* HomeItemCell.swift in Sources */,
 				33DF09B72C58FE13009D323B /* ImageCacheManager.swift in Sources */,
+				3361749B2C5CBADD00AFC7E0 /* ActorDetailInfoItemCell.swift in Sources */,
 				3387D0302C5781D500C96B7D /* Enviroment.swift in Sources */,
 				332EC5032C50124000B46ACC /* Constants.swift in Sources */,
 			);

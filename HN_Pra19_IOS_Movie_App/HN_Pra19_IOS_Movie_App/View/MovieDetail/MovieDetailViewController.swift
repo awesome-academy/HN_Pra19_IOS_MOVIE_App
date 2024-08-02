@@ -253,6 +253,14 @@ extension MovieDetailViewController: UICollectionViewDataSource, UICollectionVie
                         minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return spacing
     }
+    
+    func collectionView(_ collectionView: UICollectionView, 
+                        didSelectItemAt indexPath: IndexPath) {
+        if indexPath.section == 1 && state == .billCast {
+            let vc = ActorDetailViewController(id: billCasts[indexPath.row].id)
+            push(vc)
+        }
+    }
 }
 
 extension MovieDetailViewController {
