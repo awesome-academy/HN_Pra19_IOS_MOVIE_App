@@ -34,4 +34,10 @@ final class SearchItemCell: UITableViewCell {
         posterImageView.setImage(item.posterURL, nil)
         categoryLabel.text = item.getReleaseDate()
     }
+    
+    func configLocal(_ item: MovieLocalModel) {
+        nameLabel.text = item.title
+        posterImageView.setImage((Constants.BASE_IMAGE + (item.posterPath ?? "")), nil)
+        categoryLabel.text = item.releaseDate
+    }
 }

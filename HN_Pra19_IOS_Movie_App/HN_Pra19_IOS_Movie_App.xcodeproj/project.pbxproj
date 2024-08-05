@@ -79,9 +79,15 @@
 		33A663672C5272FD00A6AAC6 /* StaticsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A663652C5272FD00A6AAC6 /* StaticsViewController.xib */; };
 		33AED5AA2C578A52005EEB39 /* HomeItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33AED5A82C578A52005EEB39 /* HomeItemCell.xib */; };
 		33AED5AB2C578A52005EEB39 /* HomeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AED5A92C578A52005EEB39 /* HomeItemCell.swift */; };
+		33BD24B02C5E721100AA2E94 /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BD24AF2C5E721100AA2E94 /* PieChartView.swift */; };
+		33BD24B52C5E724100AA2E94 /* EmptyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33BD24B32C5E724100AA2E94 /* EmptyTableViewCell.xib */; };
+		33BD24B62C5E724100AA2E94 /* EmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BD24B42C5E724100AA2E94 /* EmptyTableViewCell.swift */; };
+		33BD24B82C5FF32F00AA2E94 /* CoreDataUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BD24B72C5FF32F00AA2E94 /* CoreDataUtils.swift */; };
+		33BD24BE2C5FF69200AA2E94 /* CoreDataStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BD24BD2C5FF69200AA2E94 /* CoreDataStatistics.swift */; };
 		33DF09B32C58F3F4009D323B /* ToastEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DF09B22C58F3F4009D323B /* ToastEnum.swift */; };
 		33DF09B52C58FD48009D323B /* ActivityIndicatorUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DF09B42C58FD48009D323B /* ActivityIndicatorUtility.swift */; };
 		33DF09B72C58FE13009D323B /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DF09B62C58FE13009D323B /* ImageCacheManager.swift */; };
+		33F04CBE2C60017F007C4BFD /* DB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33F04CBC2C60017F007C4BFD /* DB.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -159,9 +165,15 @@
 		33A663652C5272FD00A6AAC6 /* StaticsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StaticsViewController.xib; sourceTree = "<group>"; };
 		33AED5A82C578A52005EEB39 /* HomeItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeItemCell.xib; sourceTree = "<group>"; };
 		33AED5A92C578A52005EEB39 /* HomeItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeItemCell.swift; sourceTree = "<group>"; };
+		33BD24AF2C5E721100AA2E94 /* PieChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
+		33BD24B32C5E724100AA2E94 /* EmptyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyTableViewCell.xib; sourceTree = "<group>"; };
+		33BD24B42C5E724100AA2E94 /* EmptyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyTableViewCell.swift; sourceTree = "<group>"; };
+		33BD24B72C5FF32F00AA2E94 /* CoreDataUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataUtils.swift; sourceTree = "<group>"; };
+		33BD24BD2C5FF69200AA2E94 /* CoreDataStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStatistics.swift; sourceTree = "<group>"; };
 		33DF09B22C58F3F4009D323B /* ToastEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastEnum.swift; sourceTree = "<group>"; };
 		33DF09B42C58FD48009D323B /* ActivityIndicatorUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorUtility.swift; sourceTree = "<group>"; };
 		33DF09B62C58FE13009D323B /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
+		33F04CBD2C60017F007C4BFD /* DB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DB.xcdatamodel; sourceTree = "<group>"; };
 		47F2C9806B1082D5CA4D6B79 /* Pods-HN_Pra19_IOS_Movie_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HN_Pra19_IOS_Movie_App.release.xcconfig"; path = "Target Support Files/Pods-HN_Pra19_IOS_Movie_App/Pods-HN_Pra19_IOS_Movie_App.release.xcconfig"; sourceTree = "<group>"; };
 		B35DED75A3791F2F55229CCF /* Pods_HN_Pra19_IOS_Movie_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HN_Pra19_IOS_Movie_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2EA4C61F54FFCA2C1FC09B6 /* Pods-HN_Pra19_IOS_Movie_App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HN_Pra19_IOS_Movie_App.debug.xcconfig"; path = "Target Support Files/Pods-HN_Pra19_IOS_Movie_App/Pods-HN_Pra19_IOS_Movie_App.debug.xcconfig"; sourceTree = "<group>"; };
@@ -200,6 +212,7 @@
 		332EC4D42C5011E200B46ACC /* HN_Pra19_IOS_Movie_App */ = {
 			isa = PBXGroup;
 			children = (
+				33BD24B92C5FF44F00AA2E94 /* CoreData */,
 				332EC4EE2C50124000B46ACC /* Apps */,
 				332EC4DE2C5011E300B46ACC /* Assets.xcassets */,
 				3387D02E2C5780BF00C96B7D /* Config.xcconfig */,
@@ -238,8 +251,8 @@
 		332EC4F12C50124000B46ACC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				33BD24B12C5E721500AA2E94 /* CommonView */,
 				33DF09B12C58F3EB009D323B /* Enums */,
-				33A663532C5272B300A6AAC6 /* KVCircleMenu */,
 				332EC4F22C50124000B46ACC /* Constants.swift */,
 				332EC4F32C50124000B46ACC /* NibLoadableView.swift */,
 				332EC4F52C50124000B46ACC /* UIViewExtension.swift */,
@@ -248,7 +261,6 @@
 				332EC4F82C50124000B46ACC /* UIFontExtension.swift */,
 				332EC4F92C50124000B46ACC /* Utils.swift */,
 				332EC4FA2C50124000B46ACC /* GlobalFunctions.swift */,
-				332EC4FC2C50124000B46ACC /* ToastView.swift */,
 				3387D02F2C5781D500C96B7D /* Enviroment.swift */,
 				33DF09B42C58FD48009D323B /* ActivityIndicatorUtility.swift */,
 				33DF09B62C58FE13009D323B /* ImageCacheManager.swift */,
@@ -426,10 +438,40 @@
 		33AED5AD2C578A8E005EEB39 /* Statistics */ = {
 			isa = PBXGroup;
 			children = (
+				33BD24B22C5E723900AA2E94 /* Cell */,
 				33A663642C5272FD00A6AAC6 /* StaticsViewController.swift */,
 				33A663652C5272FD00A6AAC6 /* StaticsViewController.xib */,
 			);
 			path = Statistics;
+			sourceTree = "<group>";
+		};
+		33BD24B12C5E721500AA2E94 /* CommonView */ = {
+			isa = PBXGroup;
+			children = (
+				33A663532C5272B300A6AAC6 /* KVCircleMenu */,
+				332EC4FC2C50124000B46ACC /* ToastView.swift */,
+				33BD24AF2C5E721100AA2E94 /* PieChartView.swift */,
+			);
+			path = CommonView;
+			sourceTree = "<group>";
+		};
+		33BD24B22C5E723900AA2E94 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				33BD24B42C5E724100AA2E94 /* EmptyTableViewCell.swift */,
+				33BD24B32C5E724100AA2E94 /* EmptyTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		33BD24B92C5FF44F00AA2E94 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				33BD24B72C5FF32F00AA2E94 /* CoreDataUtils.swift */,
+				33BD24BD2C5FF69200AA2E94 /* CoreDataStatistics.swift */,
+				33F04CBC2C60017F007C4BFD /* DB.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		33DF09B12C58F3EB009D323B /* Enums */ = {
@@ -516,6 +558,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33BD24B52C5E724100AA2E94 /* EmptyTableViewCell.xib in Resources */,
 				3391000E2C59EC9C00890CA2 /* EmptyItemCell.xib in Resources */,
 				339100012C59EC4600890CA2 /* MovieDetailViewController.xib in Resources */,
 				33A663672C5272FD00A6AAC6 /* StaticsViewController.xib in Resources */,
@@ -587,12 +630,14 @@
 				332EC50B2C50124000B46ACC /* GlobalFunctions.swift in Sources */,
 				337447A42C53A27000D01D1D /* CreditModel.swift in Sources */,
 				3387D03C2C57870E00C96B7D /* BaseViewController.swift in Sources */,
+				33BD24B82C5FF32F00AA2E94 /* CoreDataUtils.swift in Sources */,
 				336174A02C5CEE6900AFC7E0 /* PlayTraillerViewController.swift in Sources */,
 				332EC5042C50124000B46ACC /* NibLoadableView.swift in Sources */,
 				3387D0292C577FAD00C96B7D /* SearchModel.swift in Sources */,
 				33DF09B32C58F3F4009D323B /* ToastEnum.swift in Sources */,
 				332EC5082C50124000B46ACC /* UserDefaults.swift in Sources */,
 				332EC50A2C50124000B46ACC /* Utils.swift in Sources */,
+				33BD24BE2C5FF69200AA2E94 /* CoreDataStatistics.swift in Sources */,
 				33A6635B2C5272B300A6AAC6 /* KVCircleMenuAnimator.swift in Sources */,
 				3387D0272C577F8300C96B7D /* CastModel.swift in Sources */,
 				332EC5072C50124000B46ACC /* Extensions.swift in Sources */,
@@ -602,6 +647,8 @@
 				337447A22C53A27000D01D1D /* VideoTrailerModel.swift in Sources */,
 				33A663592C5272B300A6AAC6 /* KVCircleMenuButton.swift in Sources */,
 				3387D0342C57839300C96B7D /* PeopleKnownForModel.swift in Sources */,
+				33BD24B62C5E724100AA2E94 /* EmptyTableViewCell.swift in Sources */,
+				33BD24B02C5E721100AA2E94 /* PieChartView.swift in Sources */,
 				33DF09B52C58FD48009D323B /* ActivityIndicatorUtility.swift in Sources */,
 				33A663622C5272F100A6AAC6 /* ActorViewController.swift in Sources */,
 				3387D0322C57837A00C96B7D /* ActorModel.swift in Sources */,
@@ -613,6 +660,7 @@
 				3387D0362C5783D400C96B7D /* APIPath.swift in Sources */,
 				337447A62C53A27000D01D1D /* ImagesModel.swift in Sources */,
 				33A6635A2C5272B300A6AAC6 /* KVCircleHomeMenuButton.swift in Sources */,
+				33F04CBE2C60017F007C4BFD /* DB.xcdatamodeld in Sources */,
 				339100152C59EC9C00890CA2 /* MovieDetailInfoItemCell.swift in Sources */,
 				3387D03A2C57845D00C96B7D /* VideoModel.swift in Sources */,
 				339100102C59EC9C00890CA2 /* EmptyItemCell.swift in Sources */,
@@ -861,6 +909,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		33F04CBC2C60017F007C4BFD /* DB.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				33F04CBD2C60017F007C4BFD /* DB.xcdatamodel */,
+			);
+			currentVersion = 33F04CBD2C60017F007C4BFD /* DB.xcdatamodel */;
+			path = DB.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 332EC4CA2C5011E200B46ACC /* Project object */;
 }
