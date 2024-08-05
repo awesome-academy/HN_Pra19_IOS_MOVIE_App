@@ -9,9 +9,9 @@ import UIKit
 
 final class HomeItemCell: UICollectionViewCell {
 
-    @IBOutlet weak private var bottomImageView: UIImageView!
-    @IBOutlet weak private var midImageView: UIImageView!
-    @IBOutlet weak private var topImageView: UIImageView!
+    @IBOutlet weak private var bottomView: ShadowImageView!
+    @IBOutlet weak private var midView: ShadowImageView!
+    @IBOutlet weak private var topView: ShadowImageView!
     @IBOutlet weak private var nameLabel: UILabel!
     @IBOutlet weak private var dateLabel: UILabel!
     
@@ -28,15 +28,24 @@ final class HomeItemCell: UICollectionViewCell {
     private func setUpUI() {
         self.layer.masksToBounds = false
         self.contentView.layer.masksToBounds = false
-        bottomImageView.transform = CGAffineTransform(rotationAngle: .pi / 10)
-        midImageView.transform = CGAffineTransform(rotationAngle: -.pi / 10)
+        bottomView.transform = CGAffineTransform(rotationAngle: .pi / 10)
+        midView.transform = CGAffineTransform(rotationAngle: -.pi / 10)
+        
+        [topView, midView, bottomView].forEach { img in
+            img?.setLayout(radius: 30,
+                           shadowColor: .black,
+                           shadowOpacity: 0.4,
+                           shadowOffset: .zero,
+                           shadowRadius: 10)
+            img?._borderColor = .white
+            img?._borderWidth = 6
+        }
     }
     
     func config(_ item: SearchModel) {
-        topImageView.setImage(item.posterURL, nil) { [unowned self] img in
-            self.midImageView.image = img
-            self.bottomImageView.image = img
-        }
+        topView.setImage(item.posterURL)
+        midView.setImage(item.backdropURL)
+        bottomView.setImage(item.backdropURL)
         nameLabel.text = item.getTitle()
         dateLabel.text = item.getReleaseDate()
     }

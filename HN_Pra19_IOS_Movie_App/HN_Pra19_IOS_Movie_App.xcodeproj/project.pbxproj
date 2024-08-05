@@ -26,6 +26,7 @@
 		332EC50A2C50124000B46ACC /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332EC4F92C50124000B46ACC /* Utils.swift */; };
 		332EC50B2C50124000B46ACC /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332EC4FA2C50124000B46ACC /* GlobalFunctions.swift */; };
 		332EC50D2C50124000B46ACC /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332EC4FC2C50124000B46ACC /* ToastView.swift */; };
+		332F94EE2C60ADDC00CA68AB /* ShadowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332F94ED2C60ADDC00CA68AB /* ShadowImageView.swift */; };
 		336174962C5CBAB800AFC7E0 /* ActorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336174942C5CBAB800AFC7E0 /* ActorDetailViewController.swift */; };
 		336174972C5CBAB800AFC7E0 /* ActorDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 336174952C5CBAB800AFC7E0 /* ActorDetailViewController.xib */; };
 		3361749B2C5CBADD00AFC7E0 /* ActorDetailInfoItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336174992C5CBADD00AFC7E0 /* ActorDetailInfoItemCell.swift */; };
@@ -111,6 +112,7 @@
 		332EC4F92C50124000B46ACC /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		332EC4FA2C50124000B46ACC /* GlobalFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
 		332EC4FC2C50124000B46ACC /* ToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		332F94ED2C60ADDC00CA68AB /* ShadowImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowImageView.swift; sourceTree = "<group>"; };
 		336174942C5CBAB800AFC7E0 /* ActorDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorDetailViewController.swift; sourceTree = "<group>"; };
 		336174952C5CBAB800AFC7E0 /* ActorDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActorDetailViewController.xib; sourceTree = "<group>"; };
 		336174992C5CBADD00AFC7E0 /* ActorDetailInfoItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorDetailInfoItemCell.swift; sourceTree = "<group>"; };
@@ -451,6 +453,7 @@
 				33A663532C5272B300A6AAC6 /* KVCircleMenu */,
 				332EC4FC2C50124000B46ACC /* ToastView.swift */,
 				33BD24AF2C5E721100AA2E94 /* PieChartView.swift */,
+				332F94ED2C60ADDC00CA68AB /* ShadowImageView.swift */,
 			);
 			path = CommonView;
 			sourceTree = "<group>";
@@ -628,6 +631,7 @@
 				3387D02B2C577FCA00C96B7D /* CombinedCreditModel.swift in Sources */,
 				3374479A2C53A26300D01D1D /* APIService.swift in Sources */,
 				332EC50B2C50124000B46ACC /* GlobalFunctions.swift in Sources */,
+				332F94EE2C60ADDC00CA68AB /* ShadowImageView.swift in Sources */,
 				337447A42C53A27000D01D1D /* CreditModel.swift in Sources */,
 				3387D03C2C57870E00C96B7D /* BaseViewController.swift in Sources */,
 				33BD24B82C5FF32F00AA2E94 /* CoreDataUtils.swift in Sources */,
