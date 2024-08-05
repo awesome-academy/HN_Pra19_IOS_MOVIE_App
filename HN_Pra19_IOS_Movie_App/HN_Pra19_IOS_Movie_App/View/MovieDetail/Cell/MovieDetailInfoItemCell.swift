@@ -20,6 +20,8 @@ final class MovieDetailInfoItemCell: UICollectionViewCell {
     @IBOutlet private weak var watchedIcon: UIImageView!
     @IBOutlet private weak var watchedStv: UIStackView!
     
+    private var data: SearchModel?
+    
     var onBackClick: (() -> Void)?
     var onWatchedClick: (() -> Void)?
     var onWatchListClick: (() -> Void)?
@@ -44,16 +46,32 @@ final class MovieDetailInfoItemCell: UICollectionViewCell {
         }
     }
     
-    func config(_ item: SearchModel) {
+    public func updateState() {
+        guard let data = self.data else {
+            return
+        }
+        
+        let isWatched: Bool = CoreDataStatistics.shared.fetch(isWatched: true).contains(where: {$0.id == data.id})
+        
+        let isWatchList: Bool = CoreDataStatistics.shared.fetch(isWatched: false).contains(where: {$0.id == data.id})
+        
+        watchedLabel.textColor = isWatched ? .color19BAFF : .color787575
+        watchedIcon.image = isWatched
+        ? UIImage(named: "icn_watched_selected")
+        : UIImage(named: "icn_watched")
+        
+        watchListLabel.textColor = isWatchList ? .colorFF0B8F : .color787575
+        watchListIcon.image = isWatchList
+        ? UIImage(named: "icn_watchlist_selected")
+        : UIImage(named: "icn_watchlist")
+    }
+    
+    public func config(_ item: SearchModel) {
+        self.data = item
         self.posterImageview.setImage(item.posterURL, nil)
         self.nameLabel.text = item.getName()
         self.descLabel.text = item.overview
-        
-        watchedLabel.textColor = .color787575
-        watchedIcon.image = UIImage(named: "icn_watched")
-        
-        watchListLabel.textColor = .color787575
-        watchListIcon.image = UIImage(named: "icn_watchlist")
+        self.updateState()
     }
 
     @IBAction func backClick(_ sender: Any) {

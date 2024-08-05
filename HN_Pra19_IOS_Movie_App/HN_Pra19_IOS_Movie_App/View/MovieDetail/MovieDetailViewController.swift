@@ -71,6 +71,14 @@ final class MovieDetailViewController: BaseViewController {
         }
     }
     
+    private func reloadInfo() {
+        let firstCellIndex = IndexPath(row: 0, section: 0)
+        guard let cell = self.collectionView.cellForItem(at: firstCellIndex) as? MovieDetailInfoItemCell else {
+            return
+        }
+        cell.updateState()
+    }
+    
     private func getBillCast() {
         Utils.showLoading()
         APIService.shared.getCredits(movieId: item.id,
@@ -136,6 +144,15 @@ extension MovieDetailViewController: UICollectionViewDataSource, UICollectionVie
             cell.onPlayTrailerClick = { [weak self] in
                 self?.handlePlayTrailer()
             }
+            
+            cell.onWatchedClick = { [weak self] in
+                self?.handleWathchedClick()
+            }
+            
+            cell.onWatchListClick = { [weak self] in
+                self?.handleWatchListClick()
+            }
+            
             return cell
         } else if state == .billCast {
             if billCasts.isEmpty {
@@ -275,5 +292,25 @@ extension MovieDetailViewController {
     private func handlePlayTrailer() {
         let vc = PlayTraillerViewController(id: item.id, type: item.getType())
         push(vc)
+    }
+    
+    private func handleWathchedClick() {
+        let watched = CoreDataStatistics.shared.fetch(isWatched: true)
+        if watched.contains(where: { $0.id == item.id }) {
+            CoreDataStatistics.shared.delete(item: item, isWatched: true)
+        } else {
+            CoreDataStatistics.shared.save(item: item, isWatched: true)
+        }
+        reloadInfo()
+    }
+    
+    private func handleWatchListClick() {
+        let watchList = CoreDataStatistics.shared.fetch(isWatched: false)
+        if watchList.contains(where: { $0.id == item.id }) {
+            CoreDataStatistics.shared.delete(item: item, isWatched: false)
+        } else {
+            CoreDataStatistics.shared.save(item: item, isWatched: false)
+        }
+        reloadInfo()
     }
 }

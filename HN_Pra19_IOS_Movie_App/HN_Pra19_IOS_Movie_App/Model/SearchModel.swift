@@ -53,6 +53,31 @@ class SearchModel: Codable {
         case vote_count
     }
     
+    init(movieLocal: MovieLocalModel) {
+        self.id = Int(movieLocal.id)
+        self.overview = movieLocal.overview
+        self.mediaType = MediaType(rawValue: movieLocal.mediaType ?? "movie")
+        self.releaseDate = movieLocal.releaseDate
+        self.firstAirDate = movieLocal.releaseDate
+        self.posterPath = movieLocal.posterPath
+        self.title = movieLocal.title
+        self.name = movieLocal.title
+        self.adult = false
+        self.genre_ids = []
+        self.backdropPath = ""
+        self.originalTitle = ""
+        self.originalLanguage = ""
+        self.popularity = 0
+        self.originalName = ""
+        self.originCountry = []
+        self.gender = 0
+        self.knownForDepartment = ""
+        self.profilePath = ""
+        self.video = true
+        self.vote_average = 0
+        self.vote_count = 0
+    }
+    
     var posterURL: String {
         return APIService.baseImage + (posterPath ?? "")
     }
