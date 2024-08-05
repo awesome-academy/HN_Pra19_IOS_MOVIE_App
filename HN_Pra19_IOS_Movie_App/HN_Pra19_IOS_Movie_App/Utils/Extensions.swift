@@ -202,6 +202,20 @@ extension UIImageView {
             completion?(img)
         }
     }
+    
+    func applyShadowAndCornerRadius(cornerRadius: CGFloat,
+                                    shadowColor: UIColor = .black,
+                                    shadowOpacity: Float = 0.5,
+                                    shadowOffset: CGSize = CGSize(width: 0, height: 2),
+                                    shadowRadius: CGFloat = 4) {
+        self.layer.cornerRadius = cornerRadius
+        self.layer.masksToBounds = false
+        self.layer.shadowColor = shadowColor.cgColor
+        self.layer.shadowOpacity = shadowOpacity
+        self.layer.shadowOffset = shadowOffset
+        self.layer.shadowRadius = shadowRadius
+        self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: cornerRadius).cgPath
+    }
 }
 
 extension UITableView {
