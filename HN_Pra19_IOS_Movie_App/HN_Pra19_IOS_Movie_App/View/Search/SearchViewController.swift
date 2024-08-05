@@ -14,7 +14,11 @@ final class SearchViewController: BaseViewController {
     
     private var page: Int = 0
     private var totalPages: Int = 1
-    private var isLoadMore: Bool = false
+    private var isLoadMore: Bool = false {
+        didSet {
+            self.handleLoadMore()
+        }
+    }
     private var canLoadMore: Bool = false
     private var query: String = ""
     private var data: [SearchModel] = []
@@ -40,8 +44,6 @@ final class SearchViewController: BaseViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(SearchItemCell.self)
-        tableView.showLoadMore()
-        
         searchIcon.addTapGestureRecognizer { [weak self] _ in
             self?.searchTextField.endEditing(true)
         }
@@ -72,6 +74,15 @@ final class SearchViewController: BaseViewController {
     private func reloadData() {
         mainAsync {
             self.tableView.reloadData()
+        }
+    }
+    
+    private func handleLoadMore() {
+        mainAsync { [weak self] in
+            guard let self else { return }
+            self.isLoadMore
+            ? self.tableView.showLoadMore()
+            : self.tableView.hideLoadMore()
         }
     }
     
